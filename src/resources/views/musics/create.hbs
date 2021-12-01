@@ -1,0 +1,27 @@
+<div class="mt-4">
+    <h3>Đăng nhạc</h3>
+    <form method="post" action="/musics/store" enctype="multipart/form-data">
+    <div class="form-group">
+        <label for="name">name</label>
+        <input type="text" class="form-control" id="name" name="name">
+    </div>
+   <div class="form-group">
+        <label for="name">singer</label>
+        <input type="text" class="form-control" id="singer" name="singer">
+    </div>
+    <div class="form-group">
+        <label for="name">category</label>
+        <input type="text" class="form-control" id="category" name="category">
+    </div>
+    <div class="form-group">
+         <label for="comment">lyric</label>
+         <textarea type="text" class="form-control" rows="5" id="lyric" name="lyric"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="name">audio</label>
+        <input type="file" name="audio" id="audio" class="form-control">
+    </div>
+    <button type="submit" class="btn btn-primary">Thêm nhạc</button>
+    </form>
+
+</div>

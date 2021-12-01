@@ -1,0 +1,253 @@
+.nav-item {
+  margin-left: 22px;
+  margin-right: 22px;
+  font-size: 1.1rem;
+}
+
+.right-content {
+  float: right;
+  width: 40%;
+
+}
+
+.div {
+  display: block;
+}
+
+.h3 {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: deeppink;
+}
+
+.singer_card:hover {
+  background-color: rgb(242, 255, 255);
+}
+
+.card-img-top {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#singer {
+  padding-left: 16px;
+  max-height: 18px;
+  display: block;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  color: #666;
+  font-size: 12px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+h3 {
+  font-size: 1.17em;
+  font-weight: bold;
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.inline {
+  display: inline;
+}
+
+.playlist-singer {
+  padding-bottom: 6px;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+.menu {
+  border-bottom: 1px solid #E2E2E2;
+  background: #FFF;
+  padding-left: 12px;
+}
+
+.playlist-item:hover {
+  border: 1.2px solid #eae8e4;
+  background-color: rgb(242, 255, 255);
+}
+
+.left-content {
+  float: left;
+  width: 59%;
+}
+
+.box-shadow {
+  box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+  margin-bottom: 10px;
+  background: #FFF;
+}
+
+.aplayer .aplayer-body {
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  background-color: rgb(252, 168, 213);
+}
+
+main {
+  background-color: #666;
+}
+
+.page {
+  padding: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.page a {
+  margin: 0 5px;
+  white-space: nowrap;
+  background-color: #F8F8F8;
+  padding: 1px 6px 2px 6px;
+  border: 1px solid #d3d3d3;
+  box-shadow: 0 1px 0 rgb(0 0 0 / 6%);
+}
+
+.navbar {
+  border: 1px solid #d3d3d3;
+}
+
+.avatar {
+  float: left;
+  margin-right: 10px;
+  width: 140px;
+  overflow: hidden;
+}
+
+.info {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #E2E2E2;
+}
+
+.music_page {
+  display: flex;
+}
+
+.other-singer-list {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.word {
+  text-align: center;
+}
+
+.word p {
+  margin: 0px;
+  font-size: 1.5rem;
+}
+
+.keyword {
+  font-weight: 500;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.result-singer-list {
+  padding-left: 5px;
+}
+
+.item {
+  border: 1px solid #E2E2E2;
+}
+
+.item-img {
+  display: block;
+  width: 80%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.row {
+  margin: 0px;
+}
+
+.infor {
+  margin-top: 20px;
+}
+
+.name {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding-bottom: 12px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+}
+
+.content-right {
+  border: 1px solid #d3d3d3;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+a:hover {
+  color: deeppink;
+}
+
+.intro {
+  font-size: 1rem;
+  padding-bottom: 18px;
+}
+
+.d-block {
+  height: 680px;
+  margin-bottom: 30px;
+}
+
+.header {
+  height:70px;
+}
+
+.header .collapse {
+  position: relative;
+  top: -12px;
+}
+
+.dropdown .nav-link {
+  position: relative;
+  top : -10px;
+}
+
+.user-avatar {
+  width:40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 5px;
+}
+
+.card .card-title{
+  margin-top: 10px;
+}

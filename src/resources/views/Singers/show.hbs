@@ -1,0 +1,123 @@
+<div class="slider">
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+        <img src="/image/slider1.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="/image/slider2.jpg" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+        <img src="/image/slider3.jpg" class="d-block w-100" alt="...">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+    </div>
+</div>
+
+
+<div class="content row">
+
+    <div class="col-12 col-sm-6 col-md-6 content-left">
+    <div class="box-shadow">
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-light name " id="singerpick">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">{{singer.name}}</a>
+        </div>
+        </nav>
+    
+        <div class="info">
+            <div class="row">
+              <div class="col-12 col-sm-4 col-md-4 item">
+                <img class="item-img" src=/{{singer.image}} />
+              </div>
+              <div class="col-12 col-sm-8 col-md-8 infor">
+                <h1 class="name">{{singer.name}}</h1>
+                <div class="intro">
+                  <p>{{singer.description}}</p>
+                </div>
+              </div>
+            </div>
+        </div>
+         
+        <div class="playlist">
+            {{#each musics}}
+            <div class="playlist-item menu">
+            <h3>
+                <a href="#" title="Tên Bài Hát">{{this.name}}</a>
+            </h3>
+            <div class="playlist-singer">
+                <h4 class="inline">
+                <a href="" title="Tên Thể Loại">{{this.category}}</a>
+                </h4>
+            </div>
+            </div>
+            {{/each}}
+        </div>
+        </div>
+
+    </div>
+    <div class="col-12 col-sm-6 col-md-6 content-right">
+        <div class="singer other-singer">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light nav-other-singer" id="singerpick">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">CA SĨ KHÁC</a>
+            </div>
+        </nav>
+        <div class="other-singer-list">
+            <div class="row d-inline-flex">
+            {{#each singers}}
+            <div class="col-6 col-sm-4 col-md-3 p-2 singer_card">
+                <a class="card h-100" href="/singers/{{this.slug}}">
+                <img class="card-img-top" src="/{{this.image}}" />
+                <h4 class="card-title text-center">{{this.name}}</h4>
+                </a>
+            </div>
+             {{/each}}
+            </div>
+        </div>
+        <div class="page">
+            <a href="#">«</a>
+            <strong>1</strong>
+            <a href="#">2</a>
+            <a href="#">3</a>
+            <a href="#">4</a>
+            <a href="#">5</a>
+            <a href="#">»</a>
+        </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">CHỦ ĐỀ HOT</a>
+        </div>
+        </nav>
+        <div class="card">
+        <img class="card-img-top" src="/image/huyenthoaiamnhac.jpg" alt="">
+        <img class="card-img-top" src="/image/mua.jpg" alt="">
+        <img class="card-img-top" src="/image/onharatchill.jpg" alt="">
+        </div>
+
+
+    </div>
+    </div>
+
+    <div class="boxplayer" id="aplayer"></div>
+</div>
