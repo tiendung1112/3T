@@ -30,7 +30,7 @@ class CategoryController {
     //POST /music/store
     store(req, res,next){
         const formData = {...req.body };
-        formData.image = req.file.path.split('\\').slice(5).join('/');
+        formData.image = req.file.path.split('\\').slice(4).join('/');
         const category = new Category(formData);
         category.save()
             .then(() => res.redirect('/'))

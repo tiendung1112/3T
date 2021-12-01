@@ -22,7 +22,7 @@ class MusicController {
     //POST /music/store
     store(req, res,next){
         const formData = {...req.body };
-        formData.audio = req.file.path.split('\\').slice(5).join('/');
+        formData.audio = req.file.path.split('\\').slice(4).join('/');
         const music = new Music(formData);
         music.save()
             .then(() => res.redirect('/'))
