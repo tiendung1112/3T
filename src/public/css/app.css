@@ -67,22 +67,6 @@ h3 {
   margin-top: 4px;
   margin-bottom: 4px;
 }
-<<<<<<< HEAD
-
-=======
-.box-shadow{
-  border: 1px solid #d3d3d3;
-}
-.playlist{
-  max-height: 600px;
-  overflow: auto;
-}
-.infor{
-
-    max-height: 300px;
-    overflow: auto;
-}
->>>>>>> 43b1453f6280f9cf7a33a32b3a7d72279d552045
 .inline {
   display: inline;
 }
@@ -104,6 +88,7 @@ h4 {
 .playlist-item:hover {
   border: 1.2px solid #eae8e4;
   background-color: rgb(242, 255, 255);
+  cursor: pointer;
 }
 
 .left-content {
@@ -235,4 +220,35 @@ a:hover {
 .intro {
   font-size: 1rem;
   padding-bottom: 18px;
+}
+
+.singer_card .card-title {
+  margin-top:7px;
+}
+
+.singer_card:hover {
+  box-shadow: none;
+  transform: scale(0.98)  translateY(5px);
+}
+
+.header .navbar-brand {
+  font-weight: 600;
+  color:rgba(0,0,0,1);
+}
+
+.header .navbar-brand:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.header .navbar-nav {
+  font-weight: 600;
+  color: rgba(0,0,0,1);
+}
+
+.header .navbar-nav {
+  color: rgba(0,0,0,6);
+}
+
+.d-block {
+  margin-bottom: 20px;
 }
