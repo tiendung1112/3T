@@ -67,7 +67,22 @@ h3 {
   margin-top: 4px;
   margin-bottom: 4px;
 }
+<<<<<<< HEAD
 
+=======
+.box-shadow{
+  border: 1px solid #d3d3d3;
+}
+.playlist{
+  max-height: 600px;
+  overflow: auto;
+}
+.infor{
+
+    max-height: 300px;
+    overflow: auto;
+}
+>>>>>>> 43b1453f6280f9cf7a33a32b3a7d72279d552045
 .inline {
   display: inline;
 }
