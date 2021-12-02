@@ -32,7 +32,7 @@ class SingerController {
     //POST /singer/store
     store(req, res,next){
         const formData = {...req.body };
-        formData.image = req.file.path.split('\\').slice(4).join('/');
+        formData.image = req.file.path.slice(req.file.path.search("uploads")).split("\\").join("/")
         const singer = new Singer(formData);
         singer.save()
             .then(() => res.redirect('/'))
