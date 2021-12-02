@@ -19,7 +19,7 @@ class SiteController {
     
     //Get/search    
     search(req, res,next){
-        Promise.all([Musics.find({ name: { $regex: req.query.name } }), Singers.find({ name: { $regex: req.query.name } })])
+        Promise.all([Musics.find({ name: { $regex: req.query.name } }), Singers.find({ name: { $regex: req.query.name, $options: 'i' } })])
             .then(([musics, singers]) =>
                 res.render('search', {
                     musics :mutipleMongooseToObject(musics),
