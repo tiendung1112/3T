@@ -67,7 +67,13 @@ h3 {
   margin-top: 4px;
   margin-bottom: 4px;
 }
-
+.box-shadow{
+  border: 1px solid #d3d3d3;
+}
+.playlist{
+  max-height: 600px;
+  overflow: auto;
+}
 .inline {
   display: inline;
 }
