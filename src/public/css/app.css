@@ -103,11 +103,13 @@ h4 {
   border-bottom: 1px solid #E2E2E2;
   background: #FFF;
   padding-left: 12px;
+  border-top: 1px solid #E2E2E2;
 }
 
 .playlist-item:hover {
   border: 1.2px solid #eae8e4;
   background-color: rgb(242, 255, 255);
+  cursor: pointer;
 }
 
 .left-content {
@@ -245,4 +247,35 @@ a:hover {
 .intro {
   font-size: 1rem;
   padding-bottom: 18px;
+}
+
+.singer_card .card-title {
+  margin-top:7px;
+}
+
+.singer_card:hover {
+  box-shadow: none;
+  transform: scale(0.98)  translateY(5px);
+}
+
+.header .navbar-brand {
+  font-weight: 600;
+  color:rgba(0,0,0,1);
+}
+
+.header .navbar-brand:hover {
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.header .navbar-nav {
+  font-weight: 600;
+  color: rgba(0,0,0,1);
+}
+
+.header .navbar-nav {
+  color: rgba(0,0,0,6);
+}
+
+.d-block {
+  margin-bottom: 20px;
 }
