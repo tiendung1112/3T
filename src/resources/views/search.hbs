@@ -35,18 +35,16 @@
                     <a class="navbar-brand" href="#">CA SĨ</a>
                 </div>
             </nav>
-            {{#each singers}}
             <div class="result-singer-list">
-                <div class="row">
+            {{#each singers}}           
                     <div class="col-6 col-sm-4 col-md-3 p-2 singer_card">
                         <a class="card h-100" href="/singers/{{this.slug}}">
                             <img class="card-img-top" src="/{{this.image}}" />
                             <h4 class="card-title text-center">{{this.name}}</h4>
                         </a>
                     </div>
-                </div>
-            </div>
             {{/each}}
+            </div>
         </div>
     </div>
 </div>
