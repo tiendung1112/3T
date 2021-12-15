@@ -243,12 +243,14 @@ a:hover {
   padding-bottom: 18px;
 }
 
+.type-card .card-title,
 .singer_card .card-title {
   margin-top:7px;
 }
 
+.type-card:hover,
 .singer_card:hover {
-  box-shadow: none;
+  box-shadow: none; 
   transform: scale(0.98)  translateY(5px);
 }
 
