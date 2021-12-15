@@ -4,11 +4,7 @@
   font-size: 1.1rem;
 }
 
-.right-content {
-  float: right;
-  width: 40%;
 
-}
 
 .div {
   display: block;
@@ -112,10 +108,6 @@ h4 {
   cursor: pointer;
 }
 
-.left-content {
-  float: left;
-  width: 59%;
-}
 
 .box-shadow {
   box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
@@ -225,7 +217,6 @@ main {
 .name {
   font-size: 1.2rem;
   font-weight: 500;
-  padding-bottom: 12px;
 }
 
 a {
@@ -239,7 +230,10 @@ a {
   padding-left: 0px;
   padding-right: 0px;
 }
-
+.content-left{
+  padding-left: 0px;
+  padding-right: 0px;
+}
 a:hover {
   color: deeppink;
 }

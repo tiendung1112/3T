@@ -31,8 +31,50 @@
             </button>
          </div>
       </div>
-      <div class="content">
-         <div class="right-content">
+      <div class="content row">
+         <div class="col-12 col-sm-8 left-content"> 
+            <div class="box-shadow">
+               <div class="singer">
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light nav-singer" id="singerpick">
+                     <div class="container-fluid">
+                        <a class="navbar-brand" href="#">CA SĨ</a>
+                     </div>
+                  </nav>
+                  <div class=" singer_list">
+                     <div class="row"> 
+                        {{#each singers}}
+                        <div class="col-6 col-sm-4 col-md-3 p-2 singer_card">
+                           <a class="card h-100" href="/singers/{{this.slug}}">
+                              <img class="card-img-top" src="/{{this.image}}" />
+                              <h4 class="card-title text-center">{{this.name}}</h4>
+                           </a>
+                        </div>
+                        {{/each}}
+                     </div>
+                  </div>
+               </div>
+               <div class="theloai">
+                  <nav class="navbar navbar-expand-lg navbar-light bg-light nav-type" id="type">
+                     <div class="container-fluid">
+                        <a class="navbar-brand" href="#">THỂ LOẠI</a>
+                     </div>
+                  </nav>
+                  <div class=" type_list">
+                     <div class="row">
+                        {{#each categorys}}
+                        <div class="col-6 col-sm-4 col-md-3 p-2 type-card">
+                           <a class="card h-100" href="/categorys/{{this.slug}}">
+                              <img class="card-img-top" src="/{{this.image}}" />
+                              <h4 class="card-title text-center">{{this.name}}</h4>
+                           </a>
+                        </div>
+                        {{/each}}
+                     </div>
+                  </div>
+               </div>    
+            </div>
+         </div>
+         <div class="col-12 col-sm-4 right-content">
             <div class="box-shadow">
                <nav class="navbar navbar-expand-lg navbar-light bg-light playlist-nav ">
                   <div class="container-fluid">
@@ -64,48 +106,6 @@
                <img class="card-img-top" src="/image/mua.jpg" alt="">
                <img class="card-img-top" src="/image/onharatchill.jpg" alt="">
                <img class="card-img-top" src="/image/usuk.jpg" alt="">
-            </div>
-         </div>
-         <div class="left-content"> 
-            <div class="box-shadow">
-               <div class="singer">
-                  <nav class="navbar navbar-expand-lg navbar-light bg-light nav-singer" id="singerpick">
-                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">CA SĨ</a>
-                     </div>
-                  </nav>
-                  <div class="container-fluid singer_list">
-                     <div class="row"> 
-                        {{#each singers}}
-                        <div class="col-6 col-sm-4 col-md-3 p-2 singer_card">
-                           <a class="card h-100" href="/singers/{{this.slug}}">
-                              <img class="card-img-top" src="/{{this.image}}" />
-                              <h4 class="card-title text-center">{{this.name}}</h4>
-                           </a>
-                        </div>
-                        {{/each}}
-                     </div>
-                  </div>
-               </div>
-               <div class="theloai">
-                  <nav class="navbar navbar-expand-lg navbar-light bg-light nav-type" id="type">
-                     <div class="container-fluid">
-                        <a class="navbar-brand" href="#">THỂ LOẠI</a>
-                     </div>
-                  </nav>
-                  <div class="container-fluid type_list">
-                     <div class="row">
-                        {{#each categorys}}
-                        <div class="col-6 col-sm-4 col-md-3 p-2 type-card">
-                           <a class="card h-100" href="/categorys/{{this.slug}}">
-                              <img class="card-img-top" src="/{{this.image}}" />
-                              <h4 class="card-title text-center">{{this.name}}</h4>
-                           </a>
-                        </div>
-                        {{/each}}
-                     </div>
-                  </div>
-               </div>    
             </div>
          </div>
       </div>
