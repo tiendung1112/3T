@@ -17,6 +17,15 @@ class MusicController {
    create(req, res,next){
        res.render("musics/create");
    }
+
+   //Get /music/get
+   list(req, res, next){
+       Music.find({})
+        .then(musics =>{
+            res.json(musics);
+        })
+        .catch(next);
+   }
    
    
     //POST /music/store
