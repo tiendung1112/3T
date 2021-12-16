@@ -114,12 +114,11 @@
 </div>
 
 <script>
-        const $ = document.querySelector.bind(document);
-    const $$ = document.querySelectorAll.bind(document);
-    const playlistitem = $$(".playlist-item");
-    const playlist =$$(".playlist");
-
-          const app = {
+      const $ = document.querySelector.bind(document);
+      const $$ = document.querySelectorAll.bind(document);
+      const playlistitem = $$(".playlist-item");
+      const playlist =$$(".playlist");
+      const app = {
          handleEvents: function() {
             for(var i=0; i<playlistitem.length; i++) {
                playlistitem[i].onclick = function() {
@@ -143,9 +142,6 @@
                      }]
                   });
                   ap.play();
-                //  ap.audio.name = songs[indextmp].name;
-                //  ap.audio.artist = songs[indextmp].artist;
-               // ap.audio.url = songs[indextmp].url;
                };
             };
          },  
