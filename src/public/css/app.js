@@ -22,13 +22,9 @@ fetch('http://localhost:4000/musics/get')
                 for(var i=0; i<playlistitem.length; i++) {
                 playlistitem[i].onclick = function() {
                     var tmp = this.querySelector("a").outerText;
-                    console.log(tmp);
-                    console.log(this);
                     for (var j = 0; j<songs.length; j++) {
-                        playlistitem[j].style.backgroundColor = "#ffffff";
                         if(songs[j].name== tmp) {
                             var indextmp = j;
-                            playlistitem[indextmp].style.backgroundColor = "#0000004d";
                         }
                     };
                 
