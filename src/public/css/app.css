@@ -236,6 +236,7 @@ a {
 }
 a:hover {
   color: deeppink;
+  text-decoration: none;
 }
 
 .intro {
