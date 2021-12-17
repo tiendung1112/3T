@@ -18,6 +18,22 @@ class MusicController {
        res.render("musics/create");
    }
 
+   //Get/admin/music/stored
+   stored(req, res, next) {
+       Music.find({})
+        .then(musics => res.render('musics/stored', {
+            musics: mutipleMongooseToObject(musics)
+        }))
+        .catch(next);
+    }
+
+    //Delete /admin/music/Delete
+    destroy(req, res, next){
+        Music.deleteOne({ slug: req.params.slug})
+            .then(() => res.redirect('back'))
+            .catch(next);
+    }
+
    //Get /music/get
    list(req, res, next){
        Music.find({})
@@ -34,7 +50,7 @@ class MusicController {
         formData.audio = req.file.path.slice(req.file.path.search("uploads")).split("\\").join("/")
         const music = new Music(formData);
         music.save()
-            .then(() => res.redirect('/'))
+            .then(() => res.redirect('/admin'))
             .catch(next);
     }
 }

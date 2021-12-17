@@ -254,12 +254,12 @@ a:hover {
   transform: scale(0.98)  translateY(5px);
 }
 
-.header .navbar-brand {
+.navbar-brand {
   font-weight: 600;
   color:rgba(0,0,0,1);
 }
 
-.header .navbar-brand:hover {
+.navbar-brand:hover {
   color: rgba(0, 0, 0, 0.7);
 }
 
@@ -274,4 +274,47 @@ a:hover {
 
 .d-block {
   margin-bottom: 20px;
+}
+
+
+
+.proverb {
+  margin-top:60px;
+  color: red;
+  font-size:80px;
+  text-align: center;
+  font-family: 'Corinthia', cursive;
+}
+
+.heart {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  margin: 140px auto;
+  background-color: red;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.heart:before,
+.heart:after {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  content: '';
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -o-border-radius: 50%;
+  border-radius: 50%;
+  background-color: red;
+}
+.heart:before {
+  bottom: 0px;
+  left: -150px;
+}
+.heart:after {
+  top: -150px;
+  right: 0px;
 }

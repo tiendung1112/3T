@@ -25,6 +25,22 @@ class CategoryController {
    create(req, res,next){
        res.render("categorys/create");
    }
+
+   //Get/admin /category/stored
+   stored(req, res, next) {
+    Category.find({})
+        .then(categorys => res.render('categorys/stored', {
+         categorys: mutipleMongooseToObject(categorys)
+     }))
+        .catch(next);
+    }
+
+    //Delete /admin/category/Delete
+    destroy(req, res, next){
+        Category.deleteOne({ slug: req.params.slug})
+            .then(() => res.redirect('back'))
+            .catch(next);
+    }
    
    
     //POST /music/store
@@ -33,7 +49,7 @@ class CategoryController {
         formData.image = req.file.path.slice(req.file.path.search("uploads")).split("\\").join("/")
         const category = new Category(formData);
         category.save()
-            .then(() => res.redirect('/'))
+            .then(() => res.redirect('/admin'))
             .catch(next);
     }
 }

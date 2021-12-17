@@ -1,0 +1,100 @@
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/admin">3TMUSIC</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Thêm
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/admin/musics/create">Thêm Nhạc</a></li>
+            <li><a class="dropdown-item" href="/admin/categorys/create">Thêm Thể Loại</a></li>
+            <li><a class="dropdown-item" href="/admin/singers/create">Thêm Ca Sĩ</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Xóa
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/admin/musics/stored">Xóa Nhạc</a></li>
+            <li><a class="dropdown-item" href="/admin/categorys/stored">Xóa Thể Loại</a></li>
+            <li><a class="dropdown-item" href="/admin/singers/stored">Xóa Ca Sĩ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Content -->
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">STT</th>
+      <th scope="col">Tên Ca Sĩ</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each categorys}}
+      <tr>
+        <th scope="row">{{sum @index 1}}</th>
+        <td>{{this.name}}</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <a href="" class="btn btn-link" data-slug="{{this.slug}}" data-toggle="modal" data-target="#delete-modal">Xóa</a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
+<!-- Confirm delete -->
+<div class="modal" id="delete-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Xóa Thể Loại</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>Bạn chắc chắn xóa thể loại không</p>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-delete" type="button" class="btn btn-danger">Xóa bỏ</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Delete form hidden -->
+<form name="delete-form" method="POST"></form>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded",function(){
+    var slug;
+    var deleteForm = document.forms["delete-form"];
+    $('#delete-modal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    slug = button.data('slug');
+    })
+
+    var btnDelete = document.getElementById('btn-delete');
+    btnDelete.onclick = function () {
+      deleteForm.action='/admin/categorys/' + slug +'?_method=DELETE';
+      deleteForm.submit();
+    }
+  })
+</script>

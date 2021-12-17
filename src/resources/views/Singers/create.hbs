@@ -1,3 +1,37 @@
+<!-- Header -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/admin">3TMUSIC</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Thêm
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/admin/musics/create">Thêm Nhạc</a></li>
+            <li><a class="dropdown-item" href="/admin/categorys/create">Thêm Thể Loại</a></li>
+            <li><a class="dropdown-item" href="/admin/singers/create">Thêm Ca Sĩ</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Xóa
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="/admin/musics/stored">Xóa Nhạc</a></li>
+            <li><a class="dropdown-item" href="/admin/categorys/stored">Xóa Thể Loại</a></li>
+            <li><a class="dropdown-item" href="/admin/singers/stored">Xóa Ca Sĩ</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Content -->
 <div class="mt-4">
     <h3>Thêm ca sĩ</h3>
     <form method="post" action="/singers/store" enctype="multipart/form-data">

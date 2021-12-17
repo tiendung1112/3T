@@ -6,7 +6,6 @@ const categoryController = require('../app/controllers/CategoryController');
 
 
 // newController index
-router.get('/create', categoryController.create);
 router.post('/store', upload.single('image'), categoryController.store);
 router.get('/:slug', categoryController.show);
 
