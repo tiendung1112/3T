@@ -36,7 +36,7 @@
   <thead>
     <tr>
       <th scope="col">STT</th>
-      <th scope="col">Tên Ca Sĩ</th>
+      <th scope="col">Tên Thể Loại</th>
     </tr>
   </thead>
   <tbody>
@@ -52,28 +52,26 @@
         <td></td>
         <td></td>
         <td>
-          <a href="" class="btn btn-link" data-slug="{{this.slug}}" data-toggle="modal" data-target="#delete-modal">Xóa</a>
+          <a href="" class="btn btn-link" data-slug="{{this.slug}}" data-bs-toggle="modal" data-bs-target="#delete-modal">Xóa</a>
         </td>
       </tr>
     {{/each}}
   </tbody>
 </table>
 <!-- Confirm delete -->
-<div class="modal" id="delete-modal" tabindex="-1" role="dialog">
-  <div class="modal-dialog" role="document">
+<div class="modal fade" id="delete-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Xóa Thể Loại</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
+        <h5 class="modal-title" id="exampleModalLabel">Xóa Thể Loại</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <p>Bạn chắc chắn xóa thể loại không</p>
+        BẠn có chắc chắn muốn xóa không
       </div>
       <div class="modal-footer">
         <button id="btn-delete" type="button" class="btn btn-danger">Xóa bỏ</button>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Hủy</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Hủy</button>
       </div>
     </div>
   </div>
@@ -93,7 +91,7 @@
 
     var btnDelete = document.getElementById('btn-delete');
     btnDelete.onclick = function () {
-      deleteForm.action='/admin/categorys/' + slug +'?_method=DELETE';
+      deleteForm.action='/admin/mcategorys/' + slug +'?_method=DELETE';
       deleteForm.submit();
     }
   })
