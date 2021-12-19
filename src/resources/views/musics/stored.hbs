@@ -32,6 +32,7 @@
   </div>
 </nav>
 <!-- Content -->
+<h3 style="margin: 30px 20px;">Danh sách các bài hát</h3>
 <table class="table">
   <thead>
     <tr>
@@ -49,7 +50,7 @@
       <td>{{this.singer}}</td>
       <td>{{this.category}}</td>
       <td>
-        <a href="" class="btn btn-link" data-slug="{{this.slug}}" data-bs-toggle="modal" data-bs-target="#delete-modal">Xóa</a>
+        <a href="" id="delete" class="btn btn-link" data-slug="{{this.slug}}" data-bs-toggle="modal" data-bs-target="#delete-modal">Xóa</a>
       </td>
     </tr>
     {{/each}}

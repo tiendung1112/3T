@@ -318,3 +318,18 @@ a:hover {
   top: -150px;
   right: 0px;
 }
+
+#delete {
+  color: #212529;
+  text-decoration: none;
+  border: 1px solid #d3d3d3;
+  text-align: center;
+}
+
+#delete:hover {
+  background-color: #21252973;
+}
+
+.table {
+  margin-left:20px;
+}

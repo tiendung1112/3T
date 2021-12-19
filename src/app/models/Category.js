@@ -1,3 +1,4 @@
+//Tạo table category
 const mongoose = require('mongoose');
 const slug = require('mongoose-slug-generator');
 const Schema = mongoose.Schema;

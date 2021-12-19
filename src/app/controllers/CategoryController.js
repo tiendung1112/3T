@@ -26,7 +26,7 @@ class CategoryController {
        res.render("categorys/create");
    }
 
-   //Get/admin /category/stored
+   //Get/admin /category/stored 
    stored(req, res, next) {
     Category.find({})
         .then(categorys => res.render('categorys/stored', {
@@ -35,7 +35,7 @@ class CategoryController {
         .catch(next);
     }
 
-    //Delete /admin/category/Delete
+    //Delete /admin/category/:slug  Delete
     destroy(req, res, next){
         Category.deleteOne({ slug: req.params.slug})
             .then(() => res.redirect('back'))

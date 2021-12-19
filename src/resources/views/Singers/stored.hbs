@@ -32,6 +32,7 @@
   </div>
 </nav>
 <!-- Content -->
+<h3 style="margin: 30px 20px;">Danh sách các ca sĩ</h3>
 <table class="table">
   <thead>
     <tr>
@@ -44,15 +45,9 @@
       <tr>
         <th scope="row">{{sum @index 1}}</th>
         <td>{{this.name}}</td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td style="color:white;">Dấu cách dấu cách dấu cách</td>
         <td>
-          <a href="" class="btn btn-link" data-slug="{{this.slug}}" data-bs-toggle="modal" data-bs-target="#delete-modal">Xóa</a>
+          <a href="" id="delete" class="btn btn-link" data-slug="{{this.slug}}" data-bs-toggle="modal" data-bs-target="#delete-modal">Xóa</a>
         </td>
       </tr>
     {{/each}}

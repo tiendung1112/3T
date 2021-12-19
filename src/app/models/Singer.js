@@ -1,3 +1,4 @@
+//Tạo table singer
 const mongoose = require('mongoose');
 const slug = require('mongoose-slug-generator');
 const Schema = mongoose.Schema;
