@@ -1,3 +1,4 @@
+//chuyển object sang mảng
 module.exports = {
     mutipleMongooseToObject: function (mongoose){
         return mongoose.map(mongoose => mongoose.toObject());
